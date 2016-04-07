@@ -235,22 +235,22 @@
         <div id="color-controls">
             <ul>
                 <li>
-                    <input class="jscolor {onFineChange:'update(this,\"red\")'}" value="cc66ff">
+                    <input class="jscolor {onFineChange:'updateRed(this)'}" value="cc66ff">
                 </li>
                 <li>
-                    <input class="jscolor {onFineChange:'update(this,\"yellow\")'}" value="cc66ff">
+                    <input class="jscolor {onFineChange:'updateBlue(this)'}" value="cc66ff">
                 </li>
                 <li>
-                    <input class="jscolor {onFineChange:'update(this,\"white\")'}" value="cc66ff">
+                    <input class="jscolor {onFineChange:'updateYellow(this)')'}" value="cc66ff">
                 </li>
                 <li>
-                    <input class="jscolor {onFineChange:'update(this,\"green\")'}" value="cc66ff">
+                    <input class="jscolor {onFineChange:'updateOrange(this)'}" value="cc66ff">
                 </li>
                 <li>
-                    <input class="jscolor {onFineChange:'update(this,\"blue\")'}" value="cc66ff">
+                    <input class="jscolor {onFineChange:'updateWhite(this)'}" value="cc66ff">
                 </li>
                 <li>
-                    <input class="jscolor {onFineChange:'update(this,\"orange\")'}" value="cc66ff">
+                    <input class="jscolor {onFineChange:'updateGreen(this)'}" value="cc66ff">
                 </li>
             </ul>
         </div>
@@ -265,6 +265,30 @@ YUI().use('node','rubik','message-scroll',function(Y){
 });
 </script>
 <script>
+function updateRed(jscolor) {
+    update(jscolor, "red");
+}
+
+function updateBlue(jscolor) {
+    update(jscolor, "blue");
+}
+
+function updateYellow(jscolor) {
+    update(jscolor, "yellow");
+}
+
+function updateGreen(jscolor) {
+    update(jscolor, "green");
+}
+
+function updateOrange(jscolor) {
+    update(jscolor, "orange");
+}
+
+function updateWhite(jscolor) {
+    update(jscolor, "white");
+}
+
 function update(jscolor, side) {
     console.log(side);
     var elementsOnSide = document.getElementsByClassName(side);
