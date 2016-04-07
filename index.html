@@ -292,7 +292,7 @@ function updateWhite(jscolor) {
 function update(jscolor, side) {
     var elementsOnSide = document.getElementsByClassName(side);
     for (var i = 0; i < elementsOnSide.length; i++) {
-        elementsOnSide[i].style.backgroundColor = jscolor.toHEXString() + ' !important';
+        elementsOnSide[i].style.backgroundColor = jscolor.toHEXString();
     }
 }
 </script>
