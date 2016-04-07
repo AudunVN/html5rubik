@@ -292,9 +292,11 @@ function updateWhite(jscolor) {
 function update(jscolor, side) {
     console.log(side);
     var elementsOnSide = document.getElementsByClassName(side);
+    var elementsOnSide.push(document.getElementsByClassName(side+"Edited"));
     console.log(jscolor);
     console.log(jscolor.toHEXString());
     for (var i = 0; i < elementsOnSide.length; i++) {
+        elementsOnSide[i] = side+"Edited";
         elementsOnSide[i].style.backgroundImage = 'none !important';
         elementsOnSide[i].style.backgroundColor = jscolor.toHEXString() + ' !important';
     }
