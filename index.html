@@ -292,6 +292,7 @@ function updateWhite(jscolor) {
 function update(jscolor, side) {
     console.log(side);
     var elementsOnSide = document.getElementsByClassName(side);
+    console.log(jscolor);
     for (var i = 0; i < elementsOnSide.length; i++) {
         elementsOnSide[i].style.background = '#' + jscolor + ' !important';
     }
