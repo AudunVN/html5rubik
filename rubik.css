@@ -65,7 +65,7 @@
     background-color: rgb(86,56,255);
 }
 #cube .cubie > div.white {
-    background-color: rgb(143,143,143);
+    background-color: rgb(255,255,255);
 }
 /* TEXT ROTATIONS */
 .textLeft{-webkit-transform: rotate(-90deg)}
