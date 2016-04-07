@@ -258,19 +258,20 @@
 </aside>
 </section>
 <script>
-function update(jscolor, side) {
-    elementsOnSide = document.getElementsByClassName(side);
-    for (var i = 0; i < elementsOnSide.length; i++) {
-        elementsOnSide[i].style.background = '#' + jscolor + ' !important';
-    }
-}
-</script>
-<script>
 YUI().use('node','rubik','message-scroll',function(Y){
     var scrollpanel = new Y.MessageScroll();
     var cube = window.cube = new Y.Rubik();
     cube.run();    
 });
+</script>
+<script>
+function update(jscolor, side) {
+    console.log(side);
+    var elementsOnSide = document.getElementsByClassName(side);
+    for (var i = 0; i < elementsOnSide.length; i++) {
+        elementsOnSide[i].style.background = '#' + jscolor + ' !important';
+    }
+}
 </script>
 </body>
 
