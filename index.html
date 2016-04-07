@@ -20,6 +20,7 @@
     <script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
     <script src="rubik.js"></script>
     <script src="message-scroll.js"></script>
+    <script src="jscolor.js"></script>
 </head>
 <body>
 <section id="tutorial">
@@ -231,9 +232,39 @@
                 </li>
             </ul>
         </div>   
+        <div id="color-controls">
+            <ul>
+                <li>
+                    <input class="jscolor {onFineChange:'update(this, \'red\')'}" value="cc66ff">
+                </li>
+                <li>
+                    <input class="jscolor {onFineChange:'update(this, \'yellow\')'}" value="cc66ff">
+                </li>
+                <li>
+                    <input class="jscolor {onFineChange:'update(this, \'white\')'}" value="cc66ff">
+                </li>
+                <li>
+                    <input class="jscolor {onFineChange:'update(this, \'green\')'}" value="cc66ff">
+                </li>
+                <li>
+                    <input class="jscolor {onFineChange:'update(this, \'blue\')'}" value="cc66ff">
+                </li>
+                <li>
+                    <input class="jscolor {onFineChange:'update(this, \'orange\')'}" value="cc66ff">
+                </li>
+            </ul>
+        </div>
     </section>
 </aside>
 </section>
+<script>
+function update(jscolor, side) {
+    elementsOnSide = document.getElementsByClassName(side);
+    for (var i = 0; i < elementsOnSide.length; i++) {
+        elementsOnSide[i].style.background = '#' + jscolor + ' !important';
+    }
+}
+</script>
 <script>
 YUI().use('node','rubik','message-scroll',function(Y){
     var scrollpanel = new Y.MessageScroll();
