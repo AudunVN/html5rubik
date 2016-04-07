@@ -293,8 +293,9 @@ function update(jscolor, side) {
     console.log(side);
     var elementsOnSide = document.getElementsByClassName(side);
     console.log(jscolor);
+    console.log(jscolor.toHEXString());
     for (var i = 0; i < elementsOnSide.length; i++) {
-        elementsOnSide[i].style.background = '#' + jscolor + ' !important';
+        elementsOnSide[i].style.background = '#' + jscolor.toHEXString() + ' !important';
     }
 }
 </script>
